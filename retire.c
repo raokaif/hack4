@@ -15,6 +15,11 @@ int main(int argc, char const *argv[])
     scanf("%d",&year);
     inflationAdjusted = ((1 +RateOfReturn) / (1 + RateOfInflation)) - 1;
     inflationAdjusted = inflationAdjusted / 12;
-
+    year = year * 12;
+    for (int i = 0; i <= year ; i++)
+    {
+        
+    }
+    
     return 0;
 }
