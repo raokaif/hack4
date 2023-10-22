@@ -17,17 +17,12 @@ int main(int argc, char const *argv[])
     inflationAdjusted = (float)inflationAdjusted / 12;
     interest = inflationAdjusted;
     month = year * 12;
+    printf("Month\tInterest\tBalance\n");
     for (int i = 1; i <= month; i++)
     {
-        
         interest = inflationAdjusted * (float)initialBalance;
         initialBalance = initialBalance + MonthlyContribution + (float)interest;
-        printf("%d\n",i);
-        printf("%.2f\n",initialBalance);
-        printf("%.2f\n",interest);
-        
-
-        
+        printf("%d\t%.2f\t%.2f\n",i,interest,initialBalance);  
     }
     
     return 0;
