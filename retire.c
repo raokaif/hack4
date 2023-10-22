@@ -2,7 +2,7 @@
 int main(int argc, char const *argv[])
 {
     float initialBalance, MonthlyContribution, RateOfReturn, RateOfInflation,inflationAdjusted;
-    int year;
+    int year, month;
     printf(" Enter An initial starting balance\n");
     scanf("%d",&initialBalance);
     printf(" Enter A monthly contribution amount\n");
@@ -15,9 +15,13 @@ int main(int argc, char const *argv[])
     scanf("%d",&year);
     inflationAdjusted = ((1 +RateOfReturn) / (1 + RateOfInflation)) - 1;
     inflationAdjusted = inflationAdjusted / 12;
-    year = year * 12;
+    month = year * 12;
     for (int i = 0; i <= year ; i++)
     {
+        for (int i = 0; i <= month; i++)
+        {
+            printf("%d",i);
+        }
         
     }
     
