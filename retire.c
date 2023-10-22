@@ -20,7 +20,7 @@ int main(int argc, char const *argv[])
     for (int i = 1; i <= month; i++)
     {
         
-        interest = interest * (float)initialBalance;
+        interest = inflationAdjusted * (float)initialBalance;
         initialBalance = initialBalance + MonthlyContribution + (float)interest;
         printf("%d\n",i);
         printf("%.2f\n",initialBalance);
