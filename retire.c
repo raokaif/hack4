@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
         printf("Please provide 6 command line arguments.\n");
         return 1;
     }
-    float initialBalance, MonthlyContribution, RateOfReturn, RateOfInflation,inflationAdjusted, interest;
+    float initialBalance, MonthlyContribution, RateOfReturn, RateOfInflation,inflationAdjusted, interest,TotalInterest=0;
     int year, month;
 
     initialBalance = atof(argv[1]);
@@ -26,9 +26,12 @@ int main(int argc, char *argv[])
     for (int i = 1; i <= month; i++)
     {
         interest = inflationAdjusted * (float)initialBalance;
+        TotalInterest = TotalInterest + (float)interest;
         initialBalance = initialBalance + MonthlyContribution + (float)interest;
         printf("%d\t%.2f\t%.2f\n",i,interest,initialBalance);  
     }
+    printf("Total Interest Earned: %.2f\n",TotalInterest);
+    printf("Total Nest Egg: %.2f",initialBalance);
     
     return 0;
 }
