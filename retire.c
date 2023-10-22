@@ -14,6 +14,7 @@ int main(int argc, char const *argv[])
     printf(" Enter A number of years until retirement\n");
     scanf("%d",&year);
     inflationAdjusted = ((1 +RateOfReturn) / (1 + RateOfInflation)) - 1;
-    
+    inflationAdjusted = inflationAdjusted / 12;
+
     return 0;
 }
